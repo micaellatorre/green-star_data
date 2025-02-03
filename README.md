@@ -1,82 +1,89 @@
-### **Green Star Data**  
+# **Green Star Data**  
 
-**Green Star Data** es un repositorio dedicado al desarrollo de modelos de **machine learning** para la predicción del rendimiento en cultivos de **cannabis medicinal**. Forma parte del ecosistema de **Green Star**, una aplicación diseñada para la recopilación y análisis de datos de ciclos de cultivo, con el objetivo de ofrecer información valiosa a cultivadores y facilitar la toma de decisiones basadas en datos.  
+**Green Star Data** es un repositorio dedicado al desarrollo de modelos de **machine learning** para la predicción del rendimiento en cultivos de **cannabis medicinal**. Forma parte del ecosistema de [**Green Star**](https://www.green-star.app), una aplicación diseñada para la recopilación y análisis de datos de ciclos de cultivo, con el objetivo de ofrecer información valiosa a cultivadores y facilitar la toma de decisiones basadas en datos.  
 
 Este proyecto se centra en la creación de un **dataset estructurado** a partir de datos históricos y de cultivadores reales, aplicando técnicas avanzadas de **preprocesamiento**, **oversampling** y **modelado predictivo** para abordar la tarea de clasificación del rendimiento.  
 
-### **Estructura del Proyecto**  
+## **📁 Estructura del Proyecto**
 
 El repositorio está organizado en los siguientes directorios clave:  
 
-green-star_data/
-│
-├── data/
-│   ├── history/                    # Historial de datasets utilizados
-│   └── preprocessed/               # Historial de datasets preprocesados
-│   
-├── scripts/
-│   ├── preprocessing/                  # Limpieza y preprocesamiento del dataset
-│   │   ├── user_processing.py          # Identificador único autoincremental del usuario
-│   │   ├── tipo_de_simulacion.py       # Numerar el tipo de simulación
-│   │   ├── cultivador_rating.py        # Cálculo del puntaje del cultivador
-│   │   ├── geolocation_processing.py   # Desgloce de lat y lon
-│   │   ├── dli_calc.py                 # Cálculo de DLI por etapa del cultivo
-│   │   ├── var_coding.py               # Codificación de variables categóricas
-│   │   ├── dates_transform.py          # Transformación de fechas a características numéricas
-│   │   ├── categorize_yield.py         # Categoriazar la variable objetivo
-│   │   └── main.py
-│   │
-│   ├── oversampling/               # Tecnicas de oversampling
-│   │   ├── random_oversampling.py  # Random Oversampling sencillo
-│   │   ├── smote.py                # SMOTE (Synthetic Minority Oversampling Technique)
-│   │   ├── adasyn.py               # ADASYN (Adaptive Synthetic Sampling)
-│   │   ├── cluster_based.py        # Cluster-Based Oversampling
-│   │   ├── knn_interpolation.py    # KNN Interpolation
-│   │   └── main.py
-│   │
-│   ├── training/                   # Modelos de Entrenamiento
-│   │   ├── linear_regression.py    # Entrenamiento con regresión lineal
-│   │   ├── random_forest.py        # Entrenamiento con Random Forest
-│   │   ├── xgboost.py              # Entrenamiento con XGBoost
-│   │   └── main.py
-│   │
-│   └── analysis/                       # Scripts de evaluación
-│       ├── comparative_analysis.py     # Comparación de métricas entre técnicas de oversampling
-│       ├── feature_importance.py       # Evaluación de los campos mas relevantes para RF y XGB
-│       ├── svm_feature_importance.py   # Evaluación de los campos mas relevantes para SVM
-│       ├── model_evaluation.py         # Evaluación de métricas y matrices de confusión
-│       └── visualization.py            # Ploteo de las metricas comparativas
-│
-├── outputs/
-│   ├── oversampled/                # Resultados para cada tecnica de oversampling
-│   │   ├── random/
-│   │   ├── smote/
-│   │   ├── adasyn/
-│   │   └── cluster_based/
-│   │
-│   ├── trained/                    # Resultados del entrenamiento para cada tecnica
-│   │   ├── random_forest/
-│   │   ├── svm/
-│   │   └── xgboost/
-│   │
-│   ├── figures/                    # Gráficos generados
-│   └── metrics/                    # Métricas de evaluación
-│
-└── README.md                       # Descripción del proyecto
+green-star_data/<br/>
+│<br/>
+├── data/<br/>
+│&emsp;├── history/                  &emsp;# Historial de datasets utilizados<br/>
+│&emsp;└── preprocessed/             &emsp;# Historial de datasets preprocesados<br/>
+│<br/>
+├── scripts/<br/>
+│&emsp;├── preprocessing/                &emsp;# Limpieza y preprocesamiento del dataset<br/>
+│&emsp;│&emsp;├── user_processing.py        &emsp;# Identificador único autoincremental del usuario<br/>
+│&emsp;│&emsp;├── tipo_de_simulacion.py     &emsp;# Numerar el tipo de simulación<br/>
+│&emsp;│&emsp;├── cultivador_rating.py      &emsp;# Cálculo del puntaje del cultivador<br/>
+│&emsp;│&emsp;├── geolocation_processing.py &emsp;# Desgloce de lat y lon<br/>
+│&emsp;│&emsp;├── dli_calc.py               &emsp;# Cálculo de DLI por etapa del cultivo<br/>
+│&emsp;│&emsp;├── var_coding.py             &emsp;# Codificación de variables categóricas<br/>
+│&emsp;│&emsp;├── dates_transform.py        &emsp;# Transformación de fechas a características numéricas<br/>
+│&emsp;│&emsp;├── categorize_yield.py       &emsp;# Categorizar la variable objetivo<br/>
+│&emsp;│&emsp;└── main.py<br/>
+│&emsp;│<br/>
+│&emsp;├── oversampling/             &emsp;# Técnicas de oversampling<br/>
+│&emsp;│&emsp;├── random_oversampling.py&emsp;# Random Oversampling sencillo<br/>
+│&emsp;│&emsp;├── smote.py              &emsp;# SMOTE (Synthetic Minority Oversampling Technique)<br/>
+│&emsp;│&emsp;├── adasyn.py             &emsp;# ADASYN (Adaptive Synthetic Sampling)<br/>
+│&emsp;│&emsp;├── cluster_based.py      &emsp;# Cluster-Based Oversampling<br/>
+│&emsp;│&emsp;├── knn_interpolation.py  &emsp;# KNN Interpolation<br/>
+│&emsp;│&emsp;└── main.py<br/>
+│&emsp;│<br/>
+│&emsp;├── training/                 &emsp;# Modelos de Entrenamiento<br/>
+│&emsp;│&emsp;├── linear_regression.py  &emsp;# Entrenamiento con regresión lineal<br/>
+│&emsp;│&emsp;├── random_forest.py      &emsp;# Entrenamiento con Random Forest<br/>
+│&emsp;│&emsp;├── xgboost.py            &emsp;# Entrenamiento con XGBoost<br/>
+│&emsp;│&emsp;└── main.py<br/>
+│&emsp;│<br/>
+│&emsp;└── analysis/                     &emsp;# Scripts de evaluación<br/>
+│&emsp;&nbsp;&emsp;├── comparative_analysis.py   &emsp;# Comparación de métricas entre técnicas de oversampling<br/>
+│&emsp;&nbsp;&emsp;├── feature_importance.py     &emsp;# Evaluación de los campos más relevantes para RF y XGB<br/>
+│&emsp;&nbsp;&emsp;├── svm_feature_importance.py &emsp;# Evaluación de los campos más relevantes para SVM<br/>
+│&emsp;&nbsp;&emsp;├── model_evaluation.py       &emsp;# Evaluación de métricas y matrices de confusión<br/>
+│&emsp;&nbsp;&emsp;└── visualization.py          &emsp;# Ploteo de las métricas comparativas<br/>
+│<br/>
+├── outputs/<br/>
+│&emsp;├── oversampled/              &emsp;# Resultados para cada técnica de oversampling<br/>
+│&emsp;│&emsp;├── random/<br/>
+│&emsp;│&emsp;├── smote/<br/>
+│&emsp;│&emsp;├── adasyn/<br/>
+│&emsp;│&emsp;└── cluster_based/<br/>
+│&emsp;│<br/>
+│&emsp;├── trained/                  &emsp;# Resultados del entrenamiento para cada técnica<br/>
+│&emsp;│&emsp;├── random_forest/<br/>
+│&emsp;│&emsp;├── svm/<br/>
+│&emsp;│&emsp;└── xgboost/<br/>
+│&emsp;│<br/>
+│&emsp;├── figures/                  &emsp;# Gráficos generados<br/>
+│&emsp;└── metrics/                  &emsp;# Métricas de evaluación<br/>
+│<br/>
+└── README.md                     &emsp;# Descripción del proyecto<br/>
 
-### **Técnicas Implementadas**  
+## **🔬 Técnicas Implementadas**  
 
-- **Preprocesamiento de Datos:** Normalización, eliminación de outliers y transformación de variables.  
-- **Oversampling:** Aplicación de **SMOTE, ADASYN y Cluster-Based Oversampling** para balancear las clases.  
-- **Entrenamiento de Modelos:** Evaluación de distintos enfoques de clasificación (**Random Forest, SVM, XGBoost**).  
-- **Evaluación y Comparación:** Métricas como **Accuracy, Precision, Recall y F1-Score**, además de análisis de importancia de variables y matrices de confusión.  
+### **📌 Preprocesamiento de Datos**  
+✔️ Normalización y transformación de variables  
+✔️ Eliminación de valores atípicos  
+✔️ Codificación de variables categóricas  
 
-### **Integración con Green Star**  
+### **📌 Oversampling**  
+✔️ **Random Oversampling**  
+✔️ **SMOTE (Synthetic Minority Oversampling Technique)**  
+✔️ **ADASYN (Adaptive Synthetic Sampling)**  
+✔️ **Cluster-Based Oversampling**  
+✔️ **KNN Interpolation**
 
-Los modelos entrenados en **Green Star Data** serán integrados en la aplicación **Green Star** mediante una **API**, permitiendo:  
+### **📌 Modelos de Machine Learning**  
+✔️ **Random Forest**  
+✔️ **Support Vector Machine (SVM)**  
+✔️ **XGBoost**  
 
-- La **predicción automática** del rendimiento de un cultivo en función de sus características.  
-- La generación de **recomendaciones personalizadas** para mejorar el rendimiento.  
-- La posibilidad de escalar el modelo con **datos en tiempo real** y sensores IoT en el futuro.  
-
-Este proyecto representa un paso significativo hacia la aplicación de **inteligencia artificial en la agricultura de precisión**, optimizando la producción de cannabis medicinal mediante herramientas basadas en datos.
+### **📌 Evaluación y Comparación**  
+✔️ **Análisis de importancia de variables**  
+✔️ **Matrices de confusión**  
+✔️ **Métricas de rendimiento**: Accuracy, Precision, Recall, F1-Score  
