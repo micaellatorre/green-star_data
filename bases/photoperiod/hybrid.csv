@@ -1,0 +1,16 @@
+range,stage,DLI,DLIwCO2,regCO2,boostCO2,time,spectrum1,spectrum1Color,spectrumRel,spectrum2,spectrum2Color,distance,hex
+1,Germination,12,,400,600,16-24,400-500,azul,,,,60-90,00BFFF
+2,Seedling,16,,400,600,16-24,400-500,azul,,,,40-60,006EFF
+3,Vegetative,20,25,700,1100,16-24,400-500,azul,>,500-600,rojo,30-50,BD23FF
+4,Vegetative,30,38,700,1100,16-24,400-500,azul,>,500-600,rojo,30-50,BD23FF
+5,Vegetative,40,50,700,1100,16-24,400-500,azul,>,500-600,rojo,30-50,BD23FF
+6,Vegetative,45,55,700,1100,16-24,400-500,azul,>,500-600,rojo,30-50,BD23FF
+7,Vegetative,35,43,700,1100,10-14,400-500,azul,>,500-600,rojo,30-50,BD23FF
+8,Pre-Flowering,36.5,45,1000,1450,10-13,400-500,azul,=,600-700,rojo,30-40,FF11D3
+9,Pre-Flowering,37.5,46.5,1000,1450,10-13,400-500,azul,=,600-700,rojo,30-40,FF11D3
+10,Flowering,39.5,48.5,1000,1450,10-13,400-500,azul,<,600-700,rojo,30-40,FF4500
+11,Flowering,40.5,50,1000,1450,10-13,400-500,azul,<,600-700,rojo,30-40,FF4500
+12,Flowering,41.5,51.5,1000,1450,10-13,400-500,azul,<,600-700,rojo,30-40,FF4500
+13,Flowering,40,50,1000,1450,10-14,400-500,azul,<,600-700,rojo,30-40,FF4500
+14,Maturing,36,45,1000,1450,10-14,315-400,UV,=,700-800,FR,30-40,971823
+15,Maturing,32,40,1000,1450,10-14,315-400,UV,=,700-800,FR,30-40,971823
